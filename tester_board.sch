@@ -254,7 +254,7 @@ Connection ~ 5250 6950
 Wire Wire Line
 	1100 950  1550 950 
 Wire Wire Line
-	6350 6450 6900 6450
+	6350 6450 7000 6450
 Wire Wire Line
 	1100 1050 1700 1050
 Wire Wire Line
@@ -681,30 +681,17 @@ Text Label 3600 4750 0    60   ~ 0
 BRD_PWR_RELAY
 Text Label 3600 4850 0    60   ~ 0
 BRD_BAT_RELAY
-$Comp
-L Conn_01x06_Male J4
-U 1 1 5B3BE9C4
-P 1000 4900
-F 0 "J4" H 1000 5200 50  0000 C CNN
-F 1 "Conn_01x06_Male" H 1000 4500 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm" H 1000 4900 50  0001 C CNN
-F 3 "" H 1000 4900 50  0001 C CNN
-	1    1000 4900
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	1200 4700 1700 4700
+	1250 5400 1800 5400
 Wire Wire Line
-	1200 4800 1700 4800
+	1250 5200 1750 5200
 Wire Wire Line
-	1200 4900 1700 4900
+	1250 5100 1750 5100
 Wire Wire Line
-	1200 5000 1700 5000
+	1250 5000 1750 5000
 Wire Wire Line
-	1200 5100 1700 5100
-Wire Wire Line
-	1200 5200 1700 5200
-Text Notes 1100 4500 0    60   ~ 0
+	1250 4900 1750 4900
+Text Notes 1100 4250 0    60   ~ 0
 UART Input\n
 $Comp
 L Q_NMOS_GSD Q1
@@ -1099,4 +1086,139 @@ Text Label 7150 6050 0    60   ~ 0
 D+
 Text Label 7150 5950 0    60   ~ 0
 D-
+$Comp
+L Conn_01x10_Female J4
+U 1 1 5B3F5C31
+P 1050 4900
+F 0 "J4" H 1050 5400 50  0000 C CNN
+F 1 "Conn_01x10_Female" H 550 5400 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x10_Pitch2.54mm" H 1050 4900 50  0001 C CNN
+F 3 "" H 1050 4900 50  0001 C CNN
+	1    1050 4900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 4800 1750 4800
+Wire Wire Line
+	1250 4700 1750 4700
+Wire Wire Line
+	1250 4600 1750 4600
+Wire Wire Line
+	1250 4500 2000 4500
+$Comp
+L GND #PWR023
+U 1 1 5B3F6148
+P 2150 4400
+F 0 "#PWR023" H 2150 4150 50  0001 C CNN
+F 1 "GND" H 2150 4250 50  0000 C CNN
+F 2 "" H 2150 4400 50  0001 C CNN
+F 3 "" H 2150 4400 50  0001 C CNN
+	1    2150 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 4500 2000 4350
+Wire Wire Line
+	2000 4350 2150 4350
+Wire Wire Line
+	2150 4350 2150 4400
+Text Label 1600 4600 0    60   ~ 0
+CTS
+Text Label 1600 4700 0    60   ~ 0
+TX
+Text Notes 1800 4700 0    60   ~ 0
+TX from PIC, RX into FT230
+Text Label 1600 4800 0    60   ~ 0
+RTS
+Text Label 1600 4900 0    60   ~ 0
+RX
+Text Label 1600 5000 0    60   ~ 0
+CBUS2
+Text Label 1600 5100 0    60   ~ 0
+CBUS0
+Text Label 1600 5200 0    60   ~ 0
+CBUS1
+$Comp
+L R R7
+U 1 1 5B3F668D
+P 1950 5400
+F 0 "R7" V 2030 5400 50  0000 C CNN
+F 1 "0" V 1950 5400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 1880 5400 50  0001 C CNN
+F 3 "" H 1950 5400 50  0001 C CNN
+	1    1950 5400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L VCC #PWR024
+U 1 1 5B3F6862
+P 2200 5350
+F 0 "#PWR024" H 2200 5200 50  0001 C CNN
+F 1 "VCC" H 2200 5500 50  0000 C CNN
+F 2 "" H 2200 5350 50  0001 C CNN
+F 3 "" H 2200 5350 50  0001 C CNN
+	1    2200 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 5400 2200 5400
+Wire Wire Line
+	2200 5400 2200 5350
+$Comp
+L Conn_01x05 J12
+U 1 1 5B3F6BFB
+P 3100 5200
+F 0 "J12" H 3100 5500 50  0000 C CNN
+F 1 "Conn_01x05" H 3100 4900 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x05_Pitch2.54mm" H 3100 5200 50  0001 C CNN
+F 3 "" H 3100 5200 50  0001 C CNN
+	1    3100 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 5000 2450 5000
+Wire Wire Line
+	2900 5100 2450 5100
+Wire Wire Line
+	2900 5200 2450 5200
+Wire Wire Line
+	2900 5300 2450 5300
+Wire Wire Line
+	2900 5400 2450 5400
+Text Label 2450 5000 0    60   ~ 0
+CTS
+Text Label 2450 5100 0    60   ~ 0
+RTS
+Text Label 2450 5200 0    60   ~ 0
+CBUS2
+Text Label 2450 5300 0    60   ~ 0
+CBUS0
+Text Label 2450 5400 0    60   ~ 0
+CBUS1
+$Comp
+L R R8
+U 1 1 5B3F788F
+P 7150 6450
+F 0 "R8" V 7230 6450 50  0000 C CNN
+F 1 "4.7k" V 7150 6450 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 7080 6450 50  0001 C CNN
+F 3 "" H 7150 6450 50  0001 C CNN
+	1    7150 6450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L VCC #PWR025
+U 1 1 5B3F7AD4
+P 7350 6400
+F 0 "#PWR025" H 7350 6250 50  0001 C CNN
+F 1 "VCC" H 7350 6550 50  0000 C CNN
+F 2 "" H 7350 6400 50  0001 C CNN
+F 3 "" H 7350 6400 50  0001 C CNN
+	1    7350 6400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 6400 7350 6450
+Wire Wire Line
+	7350 6450 7300 6450
 $EndSCHEMATC
